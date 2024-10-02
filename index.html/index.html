@@ -1,0 +1,531 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro C</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .top {
+            background-color: rgb(112, 223, 136);
+            text-align: center;
+            padding: 10px;
+            font-family: cursive;
+        }
+
+        .top h3 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding-top: 10px;
+        }
+
+        .about {
+            margin: 17px;
+            padding: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: rgb(236, 255, 236);
+            border-radius: 50px;
+        }
+
+        .prohead h2 {
+            padding-top: 15;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .proc1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 50px;
+            background-image: url('img/purp.jpeg');
+            background-size: cover;
+            background-position: center;
+            margin-top: 30px;
+            height: 75vh;
+        }
+
+        .proc1 h3 {
+            margin-bottom: 20px;
+            font-size: 50;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .flex-container img {
+            width: 510px;
+            height: 350px;
+            padding-left: 380;
+            padding-top: 70;
+        }
+
+        .h4-container {
+            font-size: 30;
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+
+        .proc2 {
+            background-image: url("img/litpink.jpg");
+            background-size: cover;
+            padding-bottom: 70;
+        }
+
+        .proc2 h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 35;
+            text-align: center;
+            padding: 40;
+        }
+
+        .proc2 h4 {
+            display: flex;
+            padding-left: 60;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30;
+            padding: 40;
+        }
+
+        .proc2 p {
+            font-size: 30;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-left: 90;
+        }
+
+        .proc2 img {
+            width: 300;
+            height: 180;
+            padding-top: 70;
+            padding-left: 200;
+        }
+
+        .cpudia-img-container {
+            margin: 20px 0px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .cpudia-img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .cpudia-img {
+            margin-top: 50;
+            transition: transform 0.5s;
+            border-radius: 80px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            padding-right: 190;
+            margin-left: 300;
+            padding-bottom: 30;
+            margin-bottom: 50;
+        }
+
+        .cpudia-img:hover {
+            transform: scale(1.5);
+            box-shadow: 0 0 20px rgba(28, 5, 33, 0.492);
+        }
+
+        .afp {
+            margin-top: 0;
+            margin-bottom: 50;
+            padding: 40px;
+            background-image: url("img/litpink.jpg");
+            background-size: cover;
+
+        }
+
+        .afp h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25;
+            margin: 30;
+            margin-bottom: 20;
+            padding-bottom: 30;
+        }
+
+        .afp ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: item;
+        }
+
+        .afp ol li {
+            display: inline;
+            margin-right: 60px;
+            padding-left: 90;
+        }
+
+        .afp ol li::before {
+            content: counter(item) ". ";
+            counter-increment: item;
+        }
+
+        .afp ol {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 40;
+            color: rgb(255, 0, 0);
+        }
+
+        .afp h4 {
+            display: flex;
+            padding-left: 60;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 24;
+            padding: 40;
+        }
+
+        .afp p {
+            font-size: 20;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left: 90;
+        }
+
+        .clsc h4 {
+            font-size: 30;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            margin-bottom: 50;
+            padding-top: 50;
+            color: white;
+        }
+
+        .clsc {
+            background-image: url("img/bgbg.jpg");
+            margin-top: -40;
+            padding-bottom: 50;
+
+        }
+
+        .clsc table {
+            margin: 0 auto;
+            display: table;
+            width: 80%;
+            background-image: url("img/tablebg.jpg");
+            font-size: 20;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-collapse: collapse;
+        }
+
+        .clsc th,
+        td {
+            padding: 30;
+            text-align: center;
+            border: 5px solid white;
+        }
+
+        .clsc img {
+            height: 30vh;
+            width: 200;
+        }
+
+        .internet {
+            background-image: url("img/internet.webp");
+            background-size: cover;
+            margin-top: 10;
+            padding-bottom: 100;
+        }
+
+        .internet h3 {
+            text-align: center;
+            font-size: 150;
+            padding: 150;
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+        }
+
+        .prot h3 {
+            margin-top: 50;
+            font-size: 50;
+            padding: 60;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .prot {
+            background-image: url("img/ear.webp");
+            padding-bottom: 100;
+            margin-top: -40;
+        }
+
+
+        .footer {
+
+            margin-top: 50;
+            background: #000;
+            padding: 30px 0px;
+            font-family: 'Play', sans-serif;
+            text-align: center;
+        }
+
+        .footer .row {
+            width: 100%;
+            margin: 1% 0%;
+            padding: 0.6% 0%;
+            color: gray;
+            font-size: 0.8em;
+        }
+
+        .footer .row a {
+            text-decoration: none;
+            color: gray;
+            transition: 0.5s;
+        }
+
+        .footer .row a:hover {
+            color: #fff;
+        }
+
+        .footer .row ul {
+            width: 100%;
+        }
+
+        .footer .row ul li {
+            display: inline-block;
+            margin: 30px 30px;
+        }
+
+        .footer .row a i {
+            font-size: 2em;
+            margin: 0% 1%;
+        }
+
+        @media (max-width:720px) {
+            .footer {
+                text-align: left;
+                padding: 5%;
+            }
+
+            .footer .row ul li {
+                display: block;
+                margin: 10px 0px;
+                text-align: left;
+            }
+
+            .footer .row a i {
+                margin: 0% 3%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+        <h1>Heyy Guys, I'm Your Sanjay !</h1>
+        <h3>Web Developer</h3>
+    </div>
+
+    <div class="about">
+        <marquee>
+            <h4>I am Sanjay, a first-year Computer Science Engineering (CSE) student at Kings Engineering College (CSE
+                'B' class). I'm passionate about web development, specializing in front-end development, and currently
+                expanding my skills to become a full-stack developer. With a focus on building responsive and
+                user-friendly websites, I’m continuously learning and improving my coding abilities to develop creative
+                web solutions.</p>
+        </marquee>
+    </div>
+
+    <div class="prohead">
+        <h2>Programming in C complete Notes</h2>
+    </div>
+
+    <div class="proc1">
+        <h3>Full form of the COMPUTER</h3>
+        <div class="flex-container">
+            <div class="h4-container">
+                <h4>C - Common</h4>
+                <h4>O - Operating</h4>
+                <h4>M - Machine</h4>
+                <h4>P - Particularly</h4>
+                <h4>U - Used for</h4>
+                <h4>T - Trade</h4>
+                <h4>E - Education and</h4>
+                <h4>R - Research</h4>
+            </div>
+            <img src="img/computer.png" alt="computer">
+        </div>
+    </div>
+
+    <div class="proc2">
+        <h3>2 Major Component in the Computer is Hardware & Software</h3>
+        <h4>Hardware :</h4>
+        <p>The Physical Component of the Computer is called Hardware.</p>
+        <marquee scrollamount="15">
+            <img src="img/keyboard.png">
+            <img src="img/mouse-removebg-preview.png">
+            <img src="img/rdisk.png">
+            <img src="img/cpu.png">
+            <img src="img/ram-removebg-preview.png">
+        </marquee>
+        <h4>Software :</h4>
+        <p>Logical Component of the Computer is called Software.</p>
+        <br>
+        <p>There are two types- System Software & Application Software</p>
+        <br>
+        <p>System Softwares (Eg) :</p>
+        <marquee scrollamount="15">
+            <img src="img/window.png">
+            <img src="img/os.png">
+            <img src="img/linux-removebg-preview.png">
+        </marquee>
+        <br>
+        <br>
+        <p>Application Softwares (Eg) :</p>
+        <marquee scrollamount="15">
+            <img src="img/python-removebg-preview.png">
+            <img src="img/ch-removebg-preview.png">
+            <img src="img/java-removebg-preview.png">
+            <img src="img/c-removebg-preview.png">
+        </marquee>
+        <h4>CPU diagram :</h4>
+        <img src="img/cpudia-removebg-preview.png" class="cpudia-img"></img>
+        <h4>CPU (Central Processing Unit):</h4>
+        <p>The brain of the computer that performs most of the processing.</p>
+        <p> It carries out instructions from programs by executing basic arithmetic, logical, control, and input/output
+            operations.</p>
+        <h4>ALU (Arithmetic Logic Unit):</h4>
+        <p>A part of the CPU responsible for performing arithmetic (addition, subtraction) and logic (comparisons like
+            greater than, less than) operations.</p>
+        <h4>Memory Unit:</h4>
+        <p>This stores data and instructions for the CPU to process.</p>
+        <p>Two main types:</p>
+        <p>RAM (Random Access Memory): Temporary storage used while the computer is running.</p>
+        <p>ROM (Read-Only Memory): Permanent storage for essential instructions, like booting up the computer.</p>
+        <h4>Control Unit:</h4>
+        <p>It control the all other units</p>
+        <h4>Input Unit:</h4>
+        <p>This includes devices (keyboard, mouse, etc.) used to send data to the computer for processing.</p>
+        <h4>Output Unit:</h4>
+        <p>Devices (monitor, printer, etc.) that display or output the results of the computer's processing to the user.
+        </p>
+
+    </div>
+
+    <div class="afp">
+        <h3>Three major problem sloving technique</h3>
+        <ol>
+            <li>Algorithm</li>
+            <li>Flowchart</li>
+            <li>Pesudocode</li>
+        </ol>
+        <h4>Algorithm :</h4>
+        <p>Algorithm is the step by step insteraction to slove any mathiematical or decision making problems. Should be
+            written in simple english language.</p>
+        <h4>Flowchart :</h4>
+        <p>The Victorial art diagrametic representation of an algorithm is called Flowchart.</p>\
+        <h4>Pesudocode :</h4>
+        <p>Pesudocode is the way to write program code in simple english to understand by humanbeing. should be in
+            simple english language, Key words should be in capital form.</p>
+    </div>
+
+    <div class="clsc">
+        <h4>Classification of Computer</h4>
+        <table border="1">
+            <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Personal Computer(micro computer)</td>
+                <td>The most common type of computer, used for everyday tasks like web browsing, word processing,
+                    gaming, etc. This category includes desktops, laptops, tablets, and smartphones.
+                    Example: Desktops, laptops, tablets, smartphones.</td>
+                <td><img src="img/computer_style-removebg-preview.png"></img></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Work Station</td>
+                <td>High-performance computers designed for individual users, used for tasks that require more power
+                    than a typical personal computer, such as 3D modeling, scientific research, and software
+                    development. They feature advanced hardware like high-performance CPUs and GPUs.</td>
+                <td><img src="img/workstation-removebg-preview.png"></img></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Main Frame Computer</td>
+                <td>Large, powerful computers used primarily by large organizations for bulk data processing,
+                    transaction handling, and resource management. They support many users simultaneously.</td>
+                <td><img src="img/main-removebg-preview.png"></img></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Super Computer</td>
+                <td> The most powerful type of computer, used for extremely complex calculations like climate modeling,
+                    scientific simulations, and cryptography. They are capable of processing billions of operations per
+                    second.
+                    Example: IBM Summit, Cray.</td>
+                <td><img src="img/scom-removebg-preview.png"></img></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="internet">
+        <h3>The Internet</h3>
+        <center><iframe width="560" height="315" src="https://www.youtube.com/embed/la15nQZ7eho"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe></center>
+
+    </div>
+
+    <div class="prot">
+        <h3>Protocols</h3>
+        <center><iframe width="560" height="315" src="https://www.youtube.com/embed/m--0Gyd0Mqk?si=jb8kbB1k8DZ6v1pR"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+
+                <div class="row">
+                    <ul>
+                        <li><a href="#">Linkedin.com</a></li>
+                        <li><a href="#">+91 6374825007</a></li>
+                        <li><a href="#">@lov3ly_sanjay</a></li>
+                        <li><a href="#">sanjay191721@gmail.com</a></li>
+
+
+
+                    </ul>
+                </div>
+
+                <div class="row">
+                    © 2021 All rights reserved | Designed By Sanjay
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+
+</html>
